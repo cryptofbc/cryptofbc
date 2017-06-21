@@ -9,11 +9,11 @@ NAMESPACE_BEGIN(CryptoFBC)
 typedef unsigned char* POINTER;
 typedef unsigned char FBC_Byte;
 typedef unsigned short FBC_Word;
-typedef unsigned long FBC_Dword;
+typedef unsigned int FBC_Dword;
 
 typedef unsigned char   fbyte;
 typedef unsigned short  fword;
-typedef unsigned long   fdword;
+typedef unsigned int    fdword;
 typedef unsigned int    fuint;
 
 #define ROL(X,n) (((X)<<(n))|((X)>>(32-(n))))
@@ -203,6 +203,7 @@ typedef int fbc_error_type;
 #endif
 
 #endif
+
 
 NAMESPACE_END
 
