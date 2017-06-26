@@ -1,0 +1,166 @@
+// Microsoft Visual C++ generated resource script.
+//
+#include "resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#include "afxres.h"
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// Chinese (P.R.C.) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_CHS)
+#ifdef _WIN32
+LANGUAGE LANG_CHINESE, SUBLANG_CHINESE_SIMPLIFIED
+#pragma code_page(936)
+#endif //_WIN32
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE 
+BEGIN
+    "#include ""afxres.h""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE 
+BEGIN
+    "\r\n"
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Version
+//
+
+VS_VERSION_INFO VERSIONINFO
+ FILEVERSION 2017,6,22,1
+ PRODUCTVERSION 2017,6,22,1
+ FILEFLAGSMASK 0x17L
+#ifdef _DEBUG
+ FILEFLAGS 0x1L
+#else
+ FILEFLAGS 0x0L
+#endif
+ FILEOS 0x4L
+ FILETYPE 0x2L
+ FILESUBTYPE 0x0L
+BEGIN
+    BLOCK "StringFileInfo"
+    BEGIN
+        BLOCK "000904b0"
+        BEGIN
+            VALUE "FileDescription", "ake_od2p Dynamic Link Library"
+            VALUE "FileVersion", "2017, 6, 22, 1"
+            VALUE "InternalName", "ake_od2p"
+            VALUE "LegalCopyright", "Copyright (C) 2017"
+            VALUE "OriginalFilename", "ake_od2p.dll"
+            VALUE "ProductName", "ake_od2p Dynamic Link Library"
+            VALUE "ProductVersion", "2017, 6, 22, 1"
+        END
+    END
+    BLOCK "VarFileInfo"
+    BEGIN
+        VALUE "Translation", 0x9, 1200
+    END
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_DIALOG1 DIALOGEX 0, 0, 406, 302
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "AKE Dump Editor"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    RTEXT           "Start Address : ",IDC_STATIC,23,30,52,8
+    EDITTEXT        IDC_EDIT_ADDR,95,30,56,14,ES_AUTOHSCROLL | ES_READONLY
+    RTEXT           "Size : ",IDC_STATIC,23,51,52,8
+    EDITTEXT        IDC_EDIT_SIZE,95,51,56,14,ES_AUTOHSCROLL | ES_READONLY
+    RTEXT           "Alignment : ",IDC_STATIC,173,30,52,8
+    COMBOBOX        IDC_COMBO1,247,30,56,82,CBS_DROPDOWNLIST | WS_VSCROLL | WS_TABSTOP
+    RTEXT           "Format : ",IDC_STATIC,173,51,52,8
+    COMBOBOX        IDC_COMBO2,247,51,56,76,CBS_DROPDOWNLIST | WS_VSCROLL | WS_TABSTOP
+    GROUPBOX        "Option",IDC_STATIC,17,15,369,63
+    GROUPBOX        "Output",IDC_STATIC,15,86,371,171
+    EDITTEXT        IDC_EDIT_OUTPUT,26,103,348,146,ES_MULTILINE | ES_AUTOHSCROLL | ES_READONLY | WS_VSCROLL | WS_HSCROLL,WS_EX_CLIENTEDGE | WS_EX_STATICEDGE
+    PUSHBUTTON      "&Copy",IDC_BUTTON1,15,267,50,14
+END
+
+IDD_DIALOG2 DIALOGEX 0, 0, 270, 83
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "AKE New Selction"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    LTEXT           "Start Address : ",IDC_STATIC,19,22,52,8
+    EDITTEXT        IDC_EDIT_START,81,19,68,14,ES_AUTOHSCROLL
+    LTEXT           "Size : ",IDC_STATIC,179,24,20,8
+    EDITTEXT        IDC_EDIT_SELSIZE,205,21,40,14,ES_AUTOHSCROLL
+    CONTROL         "",IDC_STATIC,"Static",SS_ETCHEDVERT,161,7,1,46
+    PUSHBUTTON      "Show Dump",IDC_BUTTON_SHOW,109,60,50,14
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO 
+BEGIN
+    IDD_DIALOG1, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 399
+        TOPMARGIN, 6
+        BOTTOMMARGIN, 295
+    END
+
+    IDD_DIALOG2, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 263
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 76
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+#endif    // Chinese (P.R.C.) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+
