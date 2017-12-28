@@ -104,7 +104,8 @@ void SMS4::SetKey(const char* key, FBC_Dword* rk)
 	{
 		K[ i & 3 ] ^= T2( K[ ( i + 1 ) & 3 ] \
 						^ K[ ( i + 2 ) & 3 ] \
-						^ K[ ( i + 3 ) & 3 ] );
+						^ K[ ( i + 3 ) & 3 ] \
+						^ CK[i] );
 		rk[ i ] = K[ i & 3 ];
 	}
 Exit0:
