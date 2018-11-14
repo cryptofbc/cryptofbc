@@ -28,7 +28,7 @@ class FBC_AES
 		void ECB_Encryption(const FBC_Dword inBlock[4], FBC_Dword outBlock[4]);
 		void ECB_Decryption(const FBC_Dword inBlock[4], FBC_Dword outBlock[4]);
 
-		bool SetKey(char* pkey, ENUM_KEY_BITS keyBits);
+		bool SetKey(fbyte* pkey, ENUM_KEY_BITS keyBits);
 
         fbc_error_type ECB_Encryption( const FBC_Byte* pin,
                                        const int cbInLen,

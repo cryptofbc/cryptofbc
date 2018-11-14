@@ -747,7 +747,7 @@ void FBC_AES::SetKey(CipherDir dir, const FBC_Dword dwKey[4])
 	}
 }
 
-bool FBC_AES::SetKey( char* pkey, ENUM_KEY_BITS keyBits )
+bool FBC_AES::SetKey( fbyte* pkey, ENUM_KEY_BITS keyBits )
 {
     // this implementation is based on the pseudo code of fips-197 5.2 Key Expansion,
     // the only optimization is that using of table lookup instead of SubWord and RotWord
