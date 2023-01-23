@@ -13,17 +13,35 @@ class FBC_AES
 		static const int BLOCKSIZE;
 		static const int DEFAULT_KEYLENGTH;
 		static const int ROUNDS;
+
 		inline FBC_Dword aes_swap(FBC_Dword dwX)
 		{
-			register int tempA,tempB;
-			tempA=dwX;
-			_asm{ rol tempA, 8          }
-			_asm{ and tempA, 0xFF00FF00 }
-			tempB=dwX;
-			_asm{ ror tempB, 8 }
-			_asm{ and tempB, 0x00FF00FF }
-			return (tempA|tempB);
+			fbyte tempBuf[4];
+			for (int i = 0; i < 4; i++)
+			{
+				tempBuf[i] = (dwX >> (i * 8)) & 0xff;
+			}
+
+			fdword dwRet = 0;
+			dwRet |= tempBuf[2];
+			dwRet |= fdword(tempBuf[3] << 8);
+			dwRet |= fdword(tempBuf[0] << 16);
+			dwRet |= fdword(tempBuf[1] << 24);
+			return dwRet;
 		}
+
+		/*inline FBC_Dword aes_swap(FBC_Dword dwX)
+		{
+			register int tempA, tempB;
+			tempA = dwX;
+			_asm { rol tempA, 8          }
+			_asm {and tempA, 0xFF00FF00 }
+			tempB = dwX;
+			_asm { ror tempB, 8 }
+			_asm {and tempB, 0x00FF00FF }
+			return (tempA | tempB);
+		}*/
+
 		void SetKey(CipherDir dir, const FBC_Dword dwKey[4]);
 		void ECB_Encryption(const FBC_Dword inBlock[4], FBC_Dword outBlock[4]);
 		void ECB_Decryption(const FBC_Dword inBlock[4], FBC_Dword outBlock[4]);

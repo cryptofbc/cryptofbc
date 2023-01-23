@@ -2,6 +2,7 @@
 #define CryptoFBC_CIPHERBASE_H
 
 #include "cfbconfig.h"
+#include "baseroutine.h"
 
 NAMESPACE_BEGIN(CryptoFBC)
 

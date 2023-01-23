@@ -50,7 +50,7 @@ static const FBC_Word wCRC16Table[] = {
 class FBC_CRC16
 {
 public:
-	bool FBC_CRC16::CalculateCRC16(
+	bool CalculateCRC16(
 		__in const char* p, 
 		__in const FBC_Dword dwLen, 
 		__in const FBC_Word wInitCRC,

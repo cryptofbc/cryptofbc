@@ -14,12 +14,13 @@ void SHA1::SHA1Transform(FBC_Dword state[5], FBC_Dword  block[16])
 	for (t=0;t<16;t++)
 	{
 		dwtemp=block[t];
-		__asm
+		/*__asm
 		{
 			mov		eax,	dwtemp
 			bswap	eax
 			mov		dwtemp,	eax
-		}
+		}*/
+		dwtemp = ROTL(dwtemp, 24);
 		dwMS[t]=dwtemp;
 	}
 
@@ -119,14 +120,15 @@ void SHA1::SHA1_Final(FBC_Byte szDigest[20])
 	bits[1]=count[0];
 	for (index=0;index<2;index++)
 	{
-		dwtemp=bits[index];
-		__asm
+		dwtemp = bits[index];
+		/*__asm
 		{
 			mov		eax,	dwtemp
 			bswap	eax
 			mov		dwtemp,	eax
-		}
-		bits[index]=dwtemp;
+		}*/
+		dwtemp = ROTL(dwtemp, 24);
+		bits[index] = dwtemp;
 	}
 	index = (unsigned int)((count[0] >> 3) & 0x3f);
 	padLen = (index < 56) ? (56 - index) : (120 - index);
@@ -135,12 +137,13 @@ void SHA1::SHA1_Final(FBC_Byte szDigest[20])
 	for (index=0;index<5;index++)
 	{
 		dwtemp=state[index];
-		__asm
+		/*__asm
 		{
 			mov		eax,	dwtemp
 			bswap	eax
 			mov		dwtemp,	eax
-		}
+		}*/
+		dwtemp = ROTL(dwtemp, 24);
 		dwx[index]=dwtemp;
 	}
 	memcpy_FBC(szDigest,dwx,20);

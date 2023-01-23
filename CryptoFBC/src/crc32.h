@@ -43,7 +43,7 @@ static const FBC_Dword dwCRC32Table[]={
 class FBC_CRC32
 {
 public:
-	bool FBC_CRC32::CalculateCRC32(
+	bool CalculateCRC32(
 		__in const char* p, 
 		__in const FBC_Dword dwLen, 
 		__in const FBC_Dword dwInitCRC,
